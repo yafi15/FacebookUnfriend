@@ -22,18 +22,18 @@ function unfriend($id, $token){
     $result = curl_exec($ch);
     curl_close($ch);
 	if($result == true){
-		$unf = Console::green('[UNFRIENDED]');
+		$unf = Console::green('[SELESAI DI UNFRIEND]');
 	} else {
-		$unf = Console::red('[FAILED TO UNFRIEND]');
+		$unf = Console::red('[TIDAK BISA UNFRIEND]');
 	}
 	return $unf;
 }
 
-echo Console::blue("     Facebook Auto Unfriend\n");
+echo Console::blue("     Facebook Auto UnfriendS\n");
 echo Console::blue("        Inactive Users\n\n");
 
 //INPUT
-echo "Facebook token : ";
+echo "Facebook Token : ";
 $fbtoken = trim(fgets(STDIN));
 echo "Year : ";
 $year = trim(fgets(STDIN));
